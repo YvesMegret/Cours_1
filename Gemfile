@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# Workshop Cours 2 back. Add gem bootstrap to integrate bootstrap more easily
+gem "twitter-bootstrap-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
