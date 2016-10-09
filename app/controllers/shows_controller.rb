@@ -1,9 +1,10 @@
 class ShowsController < ApplicationController
+  # On ajoute la méthode book dans la liste des méthodes où on set le show au début
   before_action :set_show, only: [:show, :edit, :update, :destroy, :book]
 
-  # On saute une etape de securite si on appelle BOOK en JSON
+  # On saute une etape de securite si on appel BOOK en JSON
   skip_before_action :verify_authenticity_token, only: [:book]
-	
+
   # GET /shows
   # GET /shows.json
   def index
@@ -88,7 +89,7 @@ class ShowsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def show_params
-      params.require(:show).permit(:name, :venue, :description, :capacity, :price, :image, :date)
+      params.require(:show).permit(:name, :location, :description, :capacity, :price, :image, :date)
     end
 
     # On ajoute les paramètres qu'on va envoyer avec le booking
